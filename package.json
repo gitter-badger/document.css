@@ -15,7 +15,6 @@
   },
   "devDependencies": {
     "browser-sync": "^2.11.2",
-    "fyargs": "^3.32.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.4",
     "gulp-concat": "^2.6.0",
