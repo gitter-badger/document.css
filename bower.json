@@ -1,0 +1,23 @@
+{
+  "name": "basic.css",
+  "description": "Basic styling for simple web pages",
+  "authors": [
+    "Samuel (https://SamuelChampagne.com)"
+  ],
+  "homepage": "https://github.com/iron16/basic.css",
+  "main": "basic.css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/iron16/basic.css.git"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "basic"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+  ]
+}

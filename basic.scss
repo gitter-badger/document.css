@@ -1,0 +1,132 @@
+// Vars
+$fonts_serif: 'TimesNewRoman', 'Times New Roman', 'Times', 'Baskerville', serif;
+$fonts_sans: 'Helvetica Neue', 'Helvetica', 'Calibri', 'Arial', sans-serif;
+$fonts_mono: 'Consolas', 'Lucida Console', 'DejaVu Sans Mono', 'Courier New', monospace;
+$color_text: #333;
+$color_link: #1477F1;
+$color_yotsuba-b_text: black;
+$color_yotsuba-b_link: #34345C;
+$color_yotsuba-b_heading-1: #AF0A0F;
+$color_yotsuba-b_heading-2: #0F0C5D;
+$color_yotsuba-b_quote: #789922;
+
+html {
+	font-size: 62.5%;
+}
+body {
+	font-size: 1.6em;
+	font-family: $fonts_serif;
+	line-height: 1.4;
+	text-align: justify;
+	color: $color_text;
+	margin: 1em auto;
+	max-width: 45em;
+	[data-theme="yotsuba-b"] & {
+		font-family: $fonts_sans;
+		background: #EEF2FF url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAIAAACmkByiAAAATklEQVQokWO6ePUdEwMDA1bMyIguxkikOlxqsOvHbwYjXvNR5RiJchMut2DTw8hIrJ8Z8ZiBPfxwuRGbnQNvH33jgph0hStuiE1XRKgDAPUXBHCAyYNuAAAAAElFTkSuQmCC') repeat-x 50% 0%;
+		color: $color_yotsuba-b_text;
+	}
+}
+h1, h2, h3, h4, h5, h6 {
+	text-align: center;
+}
+h1, h2 {
+	[data-theme="yotsuba-b"] & {
+		color: $color_yotsuba-b_heading-1;
+	}
+}
+h1 {
+	font-size: 3.157em;
+}
+h2 {
+	font-size: 2.369em;
+}
+h3, h4 {
+	[data-theme="yotsuba-b"] & {
+		color: $color_yotsuba-b_heading-2;
+	}
+}
+h3 {
+	font-size: 1.777em;
+}
+h4, h5, h6 {
+	font-size: 1.333em;
+}
+h5 {
+	font-style: italic;
+}
+h6 {
+	text-decoration: underline;
+}
+small {
+	h1 &, h2 &, h3 &, h4 &, h5 &, h6 & {
+		display: block;
+		font-family: $fonts_sans;
+		font-size: 60%;
+		font-weight: normal;
+		color: lighten($color_text, 20%);
+		[data-theme="yotsuba-b"] & {
+			color: $color_yotsuba-b_heading-2;
+		}
+	}
+}
+a {
+	text-decoration: underline;
+	color: $color_link;
+	[data-theme="yotsuba-b"] & {
+		color: $color_yotsuba-b_link;
+	}
+}
+img {
+	margin: auto;
+	display: block;
+	p & {
+		display: inline;
+	}
+}
+hr {
+	border: none;
+	border-top: 1px #bbb solid;
+	height: 0;
+	clear: left;
+	[data-theme="yotsuba-b"] & {
+		border-top: 1px solid #B7C5D9;
+	}
+}
+hr {
+	border: none;
+}
+code {
+	font-family: $fonts_mono;
+	font-size: 0.85em;
+	display: block;
+	padding: 0.8em 1em;
+	background-color: #eee;
+	border: 1px solid #bbb;
+	border-radius: 3px;
+	p & {
+		display: inline;
+		padding: 2px 3px;
+	}
+}
+blockquote {
+	font-size: 1.3em;
+	margin: 1.5em 3em;
+	padding: 0 0 0.15em 0.6em;
+	border-left: #222 4px solid;
+	[data-theme="yotsuba-b"] & {
+		padding: none;
+		border: none;
+		font-size: 1.1em;
+		color: $color_yotsuba-b_quote;
+	}
+}
+header {
+	text-align: center;
+}
+footer {
+	text-align: center;
+	color: lighten($color_text, 20%);
+	padding-top: 0.01em;
+	padding-bottom: 0.8em;
+}
