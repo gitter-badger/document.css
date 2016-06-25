@@ -15,7 +15,7 @@
     "framework",
     "basic"
   ],
-  "license": "MIT",
+  "license": "Apache v2.0",
   "ignore": [
     "**/.*",
     "node_modules",

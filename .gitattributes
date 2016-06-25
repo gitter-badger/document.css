@@ -1,21 +1,27 @@
 
-# https://github.com/Danimoth/gitattributes
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#                 These settings are for any web project              #
+#               https://github.com/Danimoth/gitattributes             #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-# These settings are for any web project
 
-# Handle line endings automatically for files detected as text
-# and leave all files detected as binary untouched.
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#     Handle line endings automatically for files detected as text    #
+#          and leave all files detected as binary untouched.          #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
 * text=auto
 
-#
-# The above will handle all files NOT found below
-#
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#           The above will handle all files NOT found below.          #
+# These files are text and should be normalized (Convert crlf => lf)  #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-#
-## These files are text and should be normalized (Convert crlf => lf)
-#
 
-# source code
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#                             source code                             #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
 *.php text
 *.css text
 *.sass text
@@ -41,7 +47,10 @@
 *.sh text
 *.bat text
 
-# templates
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#                             templates                               #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
 *.ejs text
 *.hbt text
 *.jade text
@@ -52,44 +61,65 @@
 *.phtml text
 *.latte text
 
-# server config
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#                           server config                             #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
 .htaccess text
 
-# git config
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#                            git config                               #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
 .gitattributes text
 .gitignore text
 .gitconfig text
 
-# code analysis config
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#                        code analysis config                         #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
 .jshintrc text
 .jscsrc text
 .jshintignore text
 .csslintrc text
 
-# misc config
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#                            misc config                              #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
 *.yaml text
 *.yml text
 .editorconfig text
 
-# build config
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#                             build config                            #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
 *.npmignore text
 *.bowerrc text
 
-# Heroku
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#                               Heroku                                #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
 Procfile text
 .slugignore text
 
-# Documentation
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#                            Documentation                            #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
 *.md text
 LICENSE text
 AUTHORS text
 
 
-#
-## These files are binary and should be left untouched
-#
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#         These files are binary and should be left untouched         #
+#                 (binary is a macro for -text -diff)                 #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-# (binary is a macro for -text -diff)
 *.png binary
 *.jpg binary
 *.jpeg binary

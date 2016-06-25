@@ -1,10 +1,13 @@
 {
   "name": "basic.css",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Basic styling for simple web pages",
-  "author": "Samuel (https://SamuelChampagne.com)",
-  "license": "MIT",
+  "author": "Samuel Champagne (http://SamuelChampagne.com)",
+  "license": "Apache v2.0",
   "private": true,
+  "engines": {
+    "node": ">=4"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/iron16/basic.css.git"
@@ -14,14 +17,19 @@
     "url": "https://github.com/iron16/basic.css/issues"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.6",
     "browser-sync": "^2.11.2",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^2.0.4",
-    "gulp-concat": "^2.6.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-changed": "^1.3.0",
+    "gulp-clean-css": "^2.0.9",
     "gulp-load-plugins": "^1.2.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^2.2.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-sass": "^2.3.1",
     "gulp-sourcemaps": "^1.6.0",
-    "yargs": "^4.3.2"
+    "postcss-reporter": "^1.3.3",
+    "postcss-scss": "^0.1.7",
+    "stylelint": "^6.3.3",
+    "stylelint-config-standard": "^6.0.0"
   }
 }

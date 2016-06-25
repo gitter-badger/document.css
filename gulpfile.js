@@ -1,45 +1,49 @@
-var gulp = require('gulp'), // require gulp
-	argv = require('yargs').argv, // yargs is used to take arguments on tasks
-	browserSync = require('browser-sync'), // like livereload but better, and with a development server built-in
-	gulpLoadPlugins = require('gulp-load-plugins'), // load all gulp plugins in node_modules
-	plg = gulpLoadPlugins(); // plugins are now useable via the plg object (e.g. plg.concat)
+const gulp = require('gulp');
+const g = require('gulp-load-plugins')();
+const browserSync = require('browser-sync');
+const postcssStylelint = require('stylelint');
+const postcssReporter = require('postcss-reporter');
+/* eslint-disable */
+const postcssScss = require('postcss-scss');
+/* eslint-enable */
 
-gulp.task('default', function() {
-	var source = ['./basic.scss'];
-	if (argv.dist) { // run if --dist flag is present
-		return gulp.src(source)
-			.pipe(plg.plumber())
-			.pipe(plg.sass({
-				outputStyle: 'compressed'
-			}))
-			.pipe(plg.concat('basic.css'))
-			.pipe(plg.cleanCss())
-			.pipe(gulp.dest('./'));
-	} else { // run if --dist flag is not present
-		return gulp.src(source)
-			.pipe(plg.plumber())
-			.pipe(plg.sourcemaps.init())
-			.pipe(plg.sass({
-				outputStyle: 'compressed'
-			}))
-			.pipe(plg.concat('basic.css'))
-			.pipe(plg.sourcemaps.write())
-			.pipe(gulp.dest('./'))
-			.pipe(browserSync.reload({stream: true}));
-	}
-});
 
-gulp.task('serve', ['default'], function() {
-	gulp.watch(['./**/*.html'], browserSync.reload);
-	gulp.watch(['./basic.scss'], ['default']);
+// Run a Development Server
+gulp.task('serve', ['default'], () => {
+	gulp.watch(['*.scss'], ['default']);
+	gulp.watch(['demos/*.html'], browserSync.reload);
 
 	return browserSync({
 		server: {
 			baseDir: './',
-			directory: true
+			directory: true, // Show directory listings
 		},
 		logPrefix: 'BrowserSync',
 		reloadDelay: 2000,
-		open: 'ui'
+		open: 'ui',
 	});
 });
+
+
+gulp.task('default', () => gulp.src(['*.scss'])
+	.pipe(g.postcss(
+		[
+			postcssStylelint(), // Check CSS code for errors & bad practices
+			postcssReporter({ // Output any errors
+				clearMessages: true, // Clear error log once done
+			}),
+		],
+		{ parser: postcssScss } // Use SCSS syntax
+	))
+	.pipe(g.sourcemaps.init())
+		.pipe(g.sass({ // compile SCSS
+			outputStyle: 'expanded',
+		}))
+		.pipe(g.autoprefixer({ // add vendor prefixed versions of properties
+			browsers: ['last 2 versions'],
+		}))
+		.pipe(g.cleanCss()) // minify
+	.pipe(g.sourcemaps.write('../sourcemaps/'))
+	.pipe(gulp.dest('./'))
+	.pipe(browserSync.stream())
+);
