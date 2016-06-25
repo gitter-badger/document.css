@@ -1,0 +1,128 @@
+/* stylelint-disable */
+/*!
+ * * * * * * * * * * * * * * * * * * * *
+ *       Basic.css (Themes File)       *
+ * * * * * * * * * * * * * * * * * * * *
+ * Basic styling for simple web pages  *
+ * * * * * * * * * * * * * * * * * * * *
+ * https://github.com/iron16/basic.css *
+ * * * * * * * * * * * * * * * * * * * *
+ *      Apache License Version 2.0     *
+ * * * * * * * * * * * * * * * * * * * *
+ *
+ */
+/* stylelint-enable */
+
+@import 'https://fonts.googleapis.com/css?family=Poiret+One|Titillium+Web';
+
+$fonts_serif: 'TimesNewRoman', 'Times New Roman', 'Times', 'Baskerville', serif;
+$fonts_sans: 'Helvetica Neue', 'Helvetica', 'Calibri', 'Arial', sans-serif;
+$fonts_mono: 'Consolas', 'Lucida Console', 'DejaVu Sans Mono', 'Courier New', monospace;
+
+$color_text: #333;
+$color_link: #1477f1;
+
+$fonts_modern_header: 'Poiret One', sans-serif;
+$fonts_modern_body: 'Titillium Web', sans-serif;
+
+body {
+	[data-theme='modern'] & {
+		font-family: $fonts_modern_body;
+	}
+	[data-theme='yotsuba-b'] & {
+		@media screen {
+			font-family: $fonts_sans;
+			background: #eef2ff url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAIAAACmkByiAAAATklEQVQokWO6ePUdEwMDA1bMyIguxkikOlxqsOvHbwYjXvNR5RiJchMut2DTw8hIrJ8Z8ZiBPfxwuRGbnQNvH33jgph0hStuiE1XRKgDAPUXBHCAyYNuAAAAAElFTkSuQmCC') repeat-x 50% 0%;
+			color: black;
+		}
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	[data-theme='modern'] & {
+		font-family: $fonts_modern_header;
+		letter-spacing: 2px;
+	}
+}
+
+h1,
+h2 {
+	[data-theme='yotsuba-b'] & {
+		@media screen {
+			color: #af0a0f;
+		}
+	}
+}
+
+h3,
+h4 {
+	[data-theme='yotsuba-b'] & {
+		@media screen {
+			color: #0f0c5d;
+		}
+	}
+}
+
+small {
+	h1 &,
+	h2 &,
+	h3 &,
+	h4 &,
+	h5 &,
+	h6 & {
+		[data-theme='modern'] & {
+			font-family: $fonts_modern_body;
+			letter-spacing: 1px;
+		}
+		[data-theme='yotsuba-b'] & {
+			@media screen {
+				color: #0f0c5d;
+			}
+		}
+	}
+}
+
+a {
+	[data-theme='modern'] & {
+		color: #6087b7;
+	}
+	[data-theme='yotsuba-b'] & {
+		@media screen {
+			color: #34345c;
+		}
+	}
+}
+
+hr {
+	[data-theme='yotsuba-b'] & {
+		@media screen {
+			border-top: 1px solid #b7c5d9;
+		}
+	}
+}
+
+code {
+	[data-theme='modern'] & {
+		border: none;
+
+		@media print {
+			border: 1px solid #bbb;
+		}
+	}
+}
+
+blockquote {
+	[data-theme='yotsuba-b'] & {
+		@media screen {
+			padding: none;
+			border: none;
+			font-size: 1.1em;
+			color: #789922;
+		}
+	}
+}
