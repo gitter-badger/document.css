@@ -1,19 +1,19 @@
 {
-  "name": "basic.css",
-  "description": "Basic styling for simple web pages",
+  "name": "document.css",
+  "description": "Semantic Styling for Simple HTML Documents",
   "authors": [
     "Samuel (https://SamuelChampagne.com)"
   ],
-  "homepage": "https://github.com/iron16/basic.css",
-  "main": "basic.css",
+  "homepage": "https://github.com/iron16/document.css",
+  "main": "document.css",
   "repository": {
     "type": "git",
-    "url": "git://github.com/iron16/basic.css.git"
+    "url": "git://github.com/iron16/document.css.git"
   },
   "keywords": [
     "css",
     "framework",
-    "basic"
+    "document"
   ],
   "license": "Apache v2.0",
   "ignore": [

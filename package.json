@@ -1,7 +1,7 @@
 {
-  "name": "basic.css",
+  "name": "document.css",
   "version": "0.0.0",
-  "description": "Basic styling for simple web pages",
+  "description": "Semantic Styling for Simple HTML Documents",
   "author": "Samuel Champagne (http://SamuelChampagne.com)",
   "license": "Apache v2.0",
   "private": true,
@@ -10,26 +10,49 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/iron16/basic.css.git"
+    "url": "https://github.com/iron16/document.css.git"
   },
-  "homepage": "https://github.com/iron16/basic.css",
+  "homepage": "https://github.com/iron16/document.css",
   "bugs": {
-    "url": "https://github.com/iron16/basic.css/issues"
+    "url": "https://github.com/iron16/document.css/issues"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "indentation": 2,
+      "declaration-block-properties-order": "alphabetical"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard"
+    ],
+    "plugins": [
+      "standard"
+    ],
+    "env": {
+      "browser": true,
+      "node": true
+    }
   },
   "devDependencies": {
-    "autoprefixer": "^6.3.6",
-    "browser-sync": "^2.11.2",
+    "autoprefixer": "^6.5.0",
+    "browser-sync": "^2.16.1",
+    "eslint": "^3.6.1",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.1",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-changed": "^1.3.0",
-    "gulp-clean-css": "^2.0.9",
-    "gulp-load-plugins": "^1.2.0",
-    "gulp-postcss": "^6.1.0",
-    "gulp-sass": "^2.3.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-changed": "^1.3.2",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-load-plugins": "^1.3.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
-    "postcss-reporter": "^1.3.3",
-    "postcss-scss": "^0.1.7",
-    "stylelint": "^6.3.3",
-    "stylelint-config-standard": "^6.0.0"
+    "postcss-reporter": "^1.4.1",
+    "postcss-scss": "^0.3.0",
+    "stylelint": "^7.3.1",
+    "stylelint-config-standard": "^13.0.2"
   }
 }

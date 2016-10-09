@@ -1,0 +1,156 @@
+/* stylelint-disable */
+/*!
+ * * * * * * * * * * * * * * * * * * * * * * * *
+ *                 Document.css                *
+ * * * * * * * * * * * * * * * * * * * * * * * *
+ * Semantic Styling for Simple HTML Documents  *
+ * * * * * * * * * * * * * * * * * * * * * * * *
+ *    https://github.com/iron16/document.css   *
+ * * * * * * * * * * * * * * * * * * * * * * * *
+ *          Apache License Version 2.0         *
+ * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ */
+/* stylelint-enable */
+
+@import 'variables';
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  color: $color_text;
+  font-family: $fonts_system;
+  font-size: 1.6em;
+  line-height: 1.4;
+  margin: 1em auto;
+  max-width: 45em;
+  text-align: justify;
+
+  @media print {
+    font-size: 1.4em;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.157em;
+}
+
+h2 {
+  font-size: 2.369em;
+}
+
+h3 {
+  font-size: 1.777em;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1.333em;
+}
+
+h5 {
+  font-style: italic;
+}
+
+h6 {
+  text-decoration: underline;
+}
+
+small {
+  h1 &,
+  h2 &,
+  h3 &,
+  h4 &,
+  h5 &,
+  h6 & {
+    color: lighten($color_text, 20%);
+    display: block;
+    font-family: $fonts_system;
+    font-size: 60%;
+    font-weight: normal;
+  }
+}
+
+p {
+  page-break-inside: avoid;
+}
+
+a {
+  color: $color_link;
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  margin: auto;
+
+  p & {
+    display: inline;
+  }
+}
+
+hr {
+  border: none;
+  border-top: 1px #bbb solid;
+  clear: left;
+  height: 0;
+  margin: 1.5em 0;
+}
+
+code {
+  background-color: #eee;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  display: block;
+  font-family: $fonts_mono;
+  font-size: 0.85em;
+  padding: 0.8em 1em;
+  page-break-inside: avoid;
+
+  @media print {
+    border: 1px solid #bbb;
+  }
+
+  p & {
+    display: inline;
+    padding: 2px 3px;
+  }
+}
+
+blockquote {
+  border-left: #222 4px solid;
+  font-size: 1.3em;
+  margin: 1.5em 3em;
+  padding: 0 0 0.15em 0.6em;
+  page-break-inside: avoid;
+}
+
+header {
+  page-break-inside: avoid;
+  text-align: center;
+}
+
+footer {
+  color: lighten($color_text, 20%);
+  padding-bottom: 0.8em;
+  padding-top: 0.01em;
+  text-align: center;
+}
