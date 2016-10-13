@@ -1,6 +1,8 @@
 document.css
 =========
 
+[![Join the chat at https://gitter.im/document-css/Lobby](https://badges.gitter.im/document-css/Lobby.svg)](https://gitter.im/document-css/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![License][license-img]][license-url]
 [![Version][version-img]][version-url]
 [![Open Issues][issues-img]][issues-url]
